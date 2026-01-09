@@ -10,6 +10,7 @@ public class Local
 
         public void GreetLocal()
         {
+            
             if (currentTime.IsBetween(morning, afternoon))
             {
                 Console.WriteLine($"Good morning {name}, it's currently {timeLocal:D} and the time is {timeLocal:t}");

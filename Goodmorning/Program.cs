@@ -15,13 +15,8 @@ class Program
         local.currentTime = TimeOnly.FromDateTime(DateTime.Now);
         local.timeLocal = DateTime.Now;
     
-        local.name = Console.ReadLine();
-        local.name = new System.Globalization.CultureInfo("en-US", false).TextInfo.ToTitleCase(local.name.ToLower());
-
+        local.name = Console.ReadLine() ?? throw new ArgumentNullException(nameof(local.name)); //usikker på null checken her
+        local.name = new System.Globalization.CultureInfo("nb-NO", false).TextInfo.ToTitleCase(local.name.ToLower());
         local.GreetLocal();
-
-        //Console.WriteLine("If you would like to see the current time in another country, type in the name of a country or "no" to exit the program");
-        //Timezone zone = new();
     }  
-    
 }
