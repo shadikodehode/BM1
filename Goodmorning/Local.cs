@@ -1,6 +1,5 @@
-using System;
-using System.Globalization;
-using System.Collections.Generic;
+namespace Goodmorning;
+
 public class Local
     {
         public string? name;

@@ -1,18 +1,25 @@
-﻿namespace Calc;
+﻿using System;
+using System.Linq;
+
+namespace Calc;
 
 class Program
 {
     static void Main(string[] args)
     {
-        Callculator calc = new();
         Console.WriteLine("This is a calculatorTM");
-        double total = calc.Sum();
-    }
-}
-public class Callculator
-{
-    public double Sum(params double[] numbers)
-    {
-        return numbers.Sum();
+        bool isRunning = true;
+        string input = Console.ReadLine();
+
+        while (isRunning)
+        {
+            if (string.IsNullOrWhiteSpace(input))
+        {
+            Console.WriteLine("Invalid, please enter a valid equation");
+            break;
+        }
+        else
+        
+        }
     }
 }
