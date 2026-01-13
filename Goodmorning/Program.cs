@@ -1,4 +1,7 @@
-﻿using System.Security.Cryptography.X509Certificates;
+﻿using System;
+using System.Collections.Generic;
+using System.Globalization;
+using System.Security.Cryptography.X509Certificates;
 
 namespace Goodmorning;
 
@@ -17,7 +20,8 @@ class Program
         // setting the variables from the 'local' class
 
         local.name = Console.ReadLine() ?? throw new ArgumentNullException(nameof(local.name)); //unsure about the null-check here, seemed to work
-        local.name = new System.Globalization.CultureInfo("nb-NO", false).TextInfo.ToTitleCase(local.name.ToLower()); //capitalizes the first letter of the name
+        local.name = new CultureInfo("nb-NO").TextInfo.ToTitleCase(local.name.ToLower()); //capitalizes the first letter of the name
+        
         local.GreetLocal(); //gets the message output
     }  
 }
