@@ -10,6 +10,7 @@ class Program
         Console.WriteLine("This is a calculatorTM");
         bool isRunning = true;
         string input = Console.ReadLine();
+        string[] element = input.Split(' ');
 
         while (isRunning)
         {
@@ -19,7 +20,11 @@ class Program
             break;
         }
         else
-        
+            if(element.Length == 3)
+                {
+                    
+                }
+
         }
     }
 }
