@@ -1,24 +1,23 @@
-﻿Animal animal = new Animal { Name = "Animals"};
-animal.Eat();
+﻿  string? input = Console.ReadLine(); 
+        string[] tokens = input.Split(' ');
+        
+//         foreach(string token in tokens)
+// {
+//     Console.WriteLine(token);
+// }
 
-Dog dog = new();
-dog.Name = "doggo";
-dog.Eat();
-dog.Bark();
-
-public class Animal
+// string _num1 = tokens[0];
+// string _num2 = tokens[2];
+// string _op = tokens[1];
+// double num1 = Convert.ToDouble(_num1);
+string lastT = null;
+foreach(var token in tokens)
 {
-    public string Name;
-    public void Eat()
-    {
-        Console.WriteLine($"{Name} is eating");
-    }
+    lastT = token;
 }
-
-public class Dog : Animal
+List<string> _token = new();
+foreach (var token in tokens)
 {
-    public void Bark()
-    {
-        Console.WriteLine($"{Name} is barking");
-    }
+    _token.Add(token);
 }
+Console.WriteLine(_token);
