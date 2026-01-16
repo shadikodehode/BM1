@@ -1,23 +1,49 @@
-﻿  string? input = Console.ReadLine(); 
-        string[] tokens = input.Split(' ');
-        
-//         foreach(string token in tokens)
-// {
-//     Console.WriteLine(token);
-// }
+﻿bool isRunning = true;
 
-// string _num1 = tokens[0];
-// string _num2 = tokens[2];
-// string _op = tokens[1];
-// double num1 = Convert.ToDouble(_num1);
-string lastT = null;
-foreach(var token in tokens)
+
+
+while (isRunning)
+
 {
-    lastT = token;
+
+    Console.WriteLine("Velkommen til programmet!");
+
+    Console.WriteLine("Velg et alternativ:");
+
+    Console.WriteLine("1. Si hei");
+
+    Console.WriteLine("2. Avslutt");
+
+
+
+    string input = Console.ReadLine();
+
+
+
+    switch (input)
+
+    {
+
+        case "1":
+
+            Console.WriteLine("Hei der!");
+
+            break;
+
+        case "2":
+
+            Console.WriteLine("Avslutter programmet...");
+
+            isRunning = false;
+
+            break;
+
+        default:
+
+            Console.WriteLine("Ugyldig valg, prøv igjen.");
+
+            break;
+
+    }
+
 }
-List<string> _token = new();
-foreach (var token in tokens)
-{
-    _token.Add(token);
-}
-Console.WriteLine(_token);

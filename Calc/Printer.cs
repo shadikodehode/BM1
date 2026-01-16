@@ -1,3 +1,4 @@
+namespace Calc;
 public class Printer
 {
     public void Print(string message)
