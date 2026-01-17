@@ -14,7 +14,7 @@ class Program
         //added colors throughout to make it look nicer
         Console.ForegroundColor = ConsoleColor.Cyan;
         Console.WriteLine("This is a simple calculator that uses one line of input"); 
-        Console.WriteLine("input a number, operator and another number e.g. '2 + 5' spaces between number and operator is mandatory");
+        Console.WriteLine("input a number then operator and another number e.g. '2 + 5' spaces between number and operator is mandatory");
         Console.WriteLine("this only supports whole numbers and simple calculations with '+' '-' '*' '/'");
         Console.WriteLine("to exit the program, input: 'exit', 'c' or 'x'");
         Console.ResetColor();
@@ -125,6 +125,7 @@ class Program
                     if(input.Contains('/'))
                     {
                         if(num2 != 0)
+                        //Zero check for divison
                         {
                             double totalDiv = sum.Div(num1, num2);
                             Console.ForegroundColor = ConsoleColor.Green;
