@@ -13,8 +13,11 @@ class Program
     {
         DigimonList digiList = new();
         digiList.Digimons();
-        digiList.Moves();
-        digiList.Supports();
 
+        MoveList moveList = new();
+        moveList.Moves();
+
+        SupportList supportList = new();
+        supportList.Supports();
     }
 }
