@@ -6,10 +6,10 @@ using CsvHelper.Configuration.Attributes;
 
 namespace Randigi.Model;
 
-public class DigimonList
-
-{   
-    
+public record DigimonList
+//using record instead of class, seemed like a better with because it's immutable
+{
+  
     [Name("Digimon")]
     public string? DigiName {get; set;}
     [Name("Stage")]
@@ -40,6 +40,48 @@ public class DigimonList
       {
         Console.WriteLine($"{digimon.DigiName}");
       }
+    
+    }
+
+  [Name("Move")]
+  public string? MoveName { get; set; }
+  [Name("Type")]
+  public string? MoveType { get; set; }
+  [Name("Attribute")]
+  public string? MoveAtr { get; set; }
+  [Name("Description")]
+  public string? MoveDesc { get; set; }
+
+   private readonly string _movePath = "Digimon CSV\\DigiDB_movelist.csv";
+    public void Moves()
+    {
+      using var moveReader = new StreamReader(_movePath);
+      using var moveCsv = new CsvReader(moveReader, CultureInfo.InvariantCulture);
+
+      var moves = moveCsv.GetRecords<MoveList>();
+
+      foreach (var skill in moves)
+      {
+        Console.WriteLine($"{skill.MoveName}");
+      }
+    }
+
+   [Name("Name")]
+  public string? SuppName {get; set;}
+  [Name("Description")]
+  public string? SuppDesc {get; set;}
+
+   private readonly string _suppPath = "Digimon CSV\\DigiDB_supportlist.csv";
+    public void Supports()
+    {
+      using var suppReader = new StreamReader(_suppPath);
+      using var suppCsv = new CsvReader(suppReader, CultureInfo.InvariantCulture);
+
+      var support = suppCsv.GetRecords<SupportList>();
+
+      foreach (var item in support)
+      {
+        Console.WriteLine($"{item.SuppName}");
+      }
     }
 }
-   
