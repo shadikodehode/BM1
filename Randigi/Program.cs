@@ -11,9 +11,13 @@ class Program
 {
     static void Main(string[] args)
     {
-        //CsvHelper for easier use of csv files, I've done successful tests with streamreader and readalllines in isolation
+        DigimonList digiList = new();
+        digiList.Digimons();
 
-        DigimonList digilist = new();
-        digilist.DigiTest();
+        MoveList moveList = new();
+        moveList.Moves();
+
+        SupportList supportList = new();
+        supportList.Supports();
     }
 }

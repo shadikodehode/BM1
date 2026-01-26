@@ -11,33 +11,34 @@ public class DigimonList
 {   
     
     [Name("Digimon")]
-    public string? digiName {get; set;}
+    public string? DigiName {get; set;}
     [Name("Stage")]
-    public string? digiStage {get; set;}
+    public string? DigiStage {get; set;}
     [Name("Type")]
-    public string? digiType {get; set;}
+    public string? DigiType {get; set;}
     [Name("Attribute")]
-    public string? digiAtr {get; set;}
+    public string? DigiAtr {get; set;}
     [Name("Atk")]
-    public int digiAtk {get; set;}
+    public int DigiAtk {get; set;}
     [Name("Int")]
-    public int digiInt {get; set;}
+    public int DigiInt {get; set;}
     [Name("SP")]
-    public int digiSp {get; set;}
+    public int DigiSp {get; set;}
 
     //error with relative path files when "right click copy relative path" simple fix to delete the first part, add double slashes
     //Randigi\Digimon CSV\DigiDB_digimonlist.csv -> Digimon CSV\\DigiDB_digimonlist.csv
     private readonly string _digiPath = "Digimon CSV\\DigiDB_digimonlist.csv";
-    public void DigiTest()
+    public void Digimons()
     {
       using var digiReader = new StreamReader(_digiPath);
-      using var digiCSV = new CsvReader(digiReader, CultureInfo.InvariantCulture);
+      using var digiCsv = new CsvReader(digiReader, CultureInfo.InvariantCulture);
 
-      var digimons = digiCSV.GetRecords<DigimonList>();
+      var digimons = digiCsv.GetRecords<DigimonList>();
+      //CsvHelper for easier use of csv files, I've done successful tests with streamreader and readalllines in isolation
 
       foreach (var digimon in digimons)
       {
-        Console.WriteLine($"{digimon.digiName}");
+        Console.WriteLine($"{digimon.DigiName}");
       }
     }
 }
