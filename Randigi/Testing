@@ -1,0 +1,53 @@
+//Tests I ran througout programming this code
+
+
+///getting each attribute from the csv files
+//
+// foreach(var digimon in digimons)
+// {
+//     Console.WriteLine($"{digimon.digiName}, {digimon.digiStage}, {digimon.digiAtk}, {digimon.digiAtr}, {digimon.digiInt}, {digimon.digiSp}");
+// }
+// foreach(var move in moves)
+// {
+//     Console.WriteLine($"{move.moveName}, {move.moveAtr}, {move.moveDesc}, {move.moveType}");
+// }
+// foreach (var item in support)
+// {
+//     Console.WriteLine($"{item.suppName}, {item.suppDesc}");
+// }
+///Success///
+
+
+
+///Testing out streamreader, I also did a readalllines test earlier with similar results
+// 
+// StreamReader reader = null;
+
+// if (File.Exists(path))
+// {
+//     reader = new StreamReader(File.OpenRead(path));
+// }
+// else
+// {
+//     Console.WriteLine("File does not exist");
+//     //var data = line.split(',')
+//     //if(!File.Exists(path)) return default;
+//     //foreach(var line in File.Readline(path))
+//     //{ if(t.tryparse(line.Split(',')[0], out T result)) {return results;} } return default;
+// }
+///Success///
+
+
+
+///
+/// // string digiPath = "Digimon CSV\\DigiDB_digimonlist.csv";
+// List<DigimonList> digiRecord = new();
+
+// using var digiReader = new StreamReader(digiPath);
+// using var digiCSV = new CsvReader(digiReader, CultureInfo.InvariantCulture);
+
+// var digimons = digiCSV.GetRecords<DigimonList>();
+
+// I wanted to handle all above in their classes but don't know how to link them in main
+// I guess when I actually make the methods I can link them, will experiment later
+///success, made the issue more complicated in my head///
