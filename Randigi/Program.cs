@@ -5,6 +5,7 @@ using Randigi.Model;
 using CsvHelper;
 using CsvHelper.Configuration;
 using CsvReader = CsvHelper.CsvReader;
+using System.Linq;
 
 namespace Randigi;
 class Program
@@ -14,10 +15,10 @@ class Program
         DigimonList digiList = new();
         digiList.Digimons();
 
-        MoveList moveList = new();
-        moveList.Moves();
+        // MoveList moveList = new();
+        // moveList.Moves();
 
-        SupportList supportList = new();
-        supportList.Supports();
+        // SupportList supportList = new();
+        // supportList.Supports();
     }
 }
