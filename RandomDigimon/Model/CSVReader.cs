@@ -34,12 +34,12 @@ public class DigimonReader
                     new DigimonReader
                     {
                         Name = column[1],
-                        Stage = column[3],
-                        Type = column[4],
-                        Atr = column[5],
-                        Sp = column[9],
-                        Atk = column[10],
-                        Int = column[12],
+                        Stage = column[2],
+                        Type = column[3],
+                        Atr = column[4],
+                        Sp = column[8],
+                        Atk = column[9],
+                        Int = column[11],
                     }
                             );
                 
