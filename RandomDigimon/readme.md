@@ -1,3 +1,2 @@
-A random Digimon creator, this is not finished, but was stuck on too long need to get on to other projects and ill get back to it
-got a lot of ideas for expansion I'll explore at a later time
+A random Digimon creator, which is not finished. I've been stuck on this and need to get on to other projects, ill get back to it at a later date with expansions
 ![pseudocode](firefox_UUtCYUcfpa.png)
