@@ -28,13 +28,10 @@ public class DigimonReader
     public string? SupportName {get; set;}
     public string?  supportDesc {get; set;}
 
-    
-
     private readonly string _digimonPath = "Digimon CSV\\DigiDB_digimonlist.csv";
     private readonly string _movePath = "Digimon CSV\\DigiDB_movelist.csv";
     private readonly string _supportPath = "Digimon CSV\\DigiDB_supportlist.csv";
 
-   
     public  List<DigimonReader> DigimonList()
     {
        
@@ -95,14 +92,5 @@ public class DigimonReader
                     });
             }
             return supports;
-    }
-
-    ///Randomizes and picks one digimom, each element is randomized    
-    public DigimonReader GetRandomDigimon()
-    {
-       var reader = new DigimonReader();
-       var digimon = reader.DigimonList();
-       var randomDigimon = digimon[Random.Shared.Next(digimon.Count)];
-       return randomDigimon;
     }
 }
